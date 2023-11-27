@@ -6,6 +6,9 @@ name: Docker
 # documentation.
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches: [ "master" ]
 
