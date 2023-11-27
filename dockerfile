@@ -18,7 +18,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -v -o myapp .
 
 # 使用 scratch 作为最小运行环境
-FROM scratch
+FROM alpine:3.18.4
 
 # 从构建环境复制构建好的应用程序
 COPY --from=builder /app/myapp /myapp
